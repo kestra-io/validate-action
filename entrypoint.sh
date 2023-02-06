@@ -4,7 +4,7 @@
 if [[ $3 ]]; then
   location="--server=$3"
   if [[ $4 && $5 ]]; then
-      server="$server --user=$5:$6"
+      location="$location --user=$4:$5"
   fi
 else
   location="--local"
