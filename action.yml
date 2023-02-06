@@ -1,4 +1,4 @@
-name: 'Kestra Validate Action'
+name: 'Validate Action'
 description: 'Validate a list of resources from a folder recursively'
 inputs:
   directory:
@@ -11,7 +11,6 @@ inputs:
     options:
       - flow
       - template
-    default: flow
   server:
     description: 'URL of your Kestra server, if none is provided, validation is done locally'
     required: false
