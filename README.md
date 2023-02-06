@@ -12,12 +12,12 @@ The Action version is based on the Kestra Version. Only Kestra v0.6.1+ is suppor
 * Take a folder in input containing your `Flow` **or** `Template` as yaml files. The action look recursively meaning
 resources in subfolder will be validated too.
 * For each resource, 2 outputs are possible:
-  * `:heavy_check_mark: flow-id` when your resource is validated.
-  * `:x: filename` when an error was found in your resource. Following by the error message.
+  * ':heavy_check_mark: flow-id' when your resource is validated.
+  * ':x: filename' when an error was found in your resource. Following by the error message.
 
 ## Usage
 
-The validation can be done locally within the client, but if you have custom plugin or want your `Flows` to be validated
+The validation can be done locally with the client, but if you have custom plugin or want your `Flows` to be validated
 with TaskDefaults included, it may be more interesting to validate your resources on the server-side.
 
 ### Inputs
