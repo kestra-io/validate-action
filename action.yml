@@ -1,5 +1,8 @@
-name: 'Validate Action'
+name: 'Kestra Validate Action'
 description: 'Validate a list of resources from a folder recursively'
+branding:
+  icon: 'check-circle'
+  color: 'blue'
 inputs:
   directory:
     description: 'Folder containing your resources'
