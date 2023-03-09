@@ -22,7 +22,7 @@ The Action version is based on the Kestra Version. Only Kestra v0.6.1+ is suppor
 | Inputs        | Required           | Default | Description                                                                |
 |---------------|--------------------|---------|----------------------------------------------------------------------------|
 | ``directory`` | :heavy_check_mark: |         | Folder containing your resources                                           |
-| ``resource``  | :x:                |         | Resource you want to update in your namespace, can be `flow` or `template` |
+| ``resource``  | :heavy_check_mark: |         | Resource you want to update in your namespace, can be `flow` or `template` |
 | ``server``    | :x:                |         | URL of your Kestra server, if none is provided, validation is done locally |
 | ``user``      | :x:                |         | User for the basic auth                                                    |
 | ``password``  | :x:                |         | Password for the basic auth                                                |

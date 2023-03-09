@@ -9,7 +9,7 @@ inputs:
     required: true
   resource:
     description: 'Resource you want to validate, can be "flow" or "template"'
-    required: false
+    required: true
     type: choice
     options:
       - flow
