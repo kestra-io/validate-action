@@ -1,11 +1,11 @@
-name: 'Kestra Validate Action'
-description: 'Validate a list of resources from a folder recursively'
+name: "Kestra Validate Action"
+description: "Validate a list of resources from a folder recursively"
 branding:
-  icon: 'check-circle'
-  color: 'blue'
+  icon: "check-circle"
+  color: "blue"
 inputs:
   directory:
-    description: 'Folder containing your resources'
+    description: "Folder containing your resources"
     required: true
   resource:
     description: 'Resource you want to validate, can be "flow" or "template"'
@@ -15,17 +15,21 @@ inputs:
       - flow
       - template
   server:
-    description: 'URL of your Kestra server, if none is provided, validation is done locally'
+    description: "URL of your Kestra server, if none is provided, validation is done locally"
     required: false
   user:
-    description: 'User for the basic auth'
+    description: "User for the basic auth"
     required: false
   password:
-    description: 'Password for the basic auth'
+    description: "Password for the basic auth"
     required: false
+  image_tag:
+    description: "The Docker image tag to use for running the Kestra server"
+    required: false
+    default: "latest-full" # Default tag
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.directory }}
     - ${{ inputs.resource }}
