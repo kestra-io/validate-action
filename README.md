@@ -9,23 +9,24 @@ The Action version is based on the Kestra Version. Only Kestra v0.6.1+ is suppor
 
 ## What does the action do ?
 
-* Take a folder in input containing your `Flow` **or** `Template` as yaml files. The action look recursively meaning
+- Take a folder in input containing your `Flow` **or** `Template` as yaml files. The action look recursively meaning
   resources in subfolder will be validated too.
-* For each resource, 2 outputs are possible:
-    * ':heavy_check_mark: flow-id' when your resource is validated.
-    * ':x: filename' when an error was found in your resource. Following by the error message.
+- For each resource, 2 outputs are possible:
+  - ':heavy_check_mark: flow-id' when your resource is validated.
+  - ':x: filename' when an error was found in your resource. Following by the error message.
 
 ## Usage
 
 ### Inputs
 
-| Inputs        | Required           | Default | Description                                                                |
-|---------------|--------------------|---------|----------------------------------------------------------------------------|
-| ``directory`` | :heavy_check_mark: |         | Folder containing your resources                                           |
-| ``resource``  | :heavy_check_mark: |         | Resource you want to update in your namespace, can be `flow` or `template` |
-| ``server``    | :x:                |         | URL of your Kestra server, if none is provided, validation is done locally |
-| ``user``      | :x:                |         | User for the basic auth                                                    |
-| ``password``  | :x:                |         | Password for the basic auth                                                |
+| Inputs      | Required           | Default | Description                                                                |
+| ----------- | ------------------ | ------- | -------------------------------------------------------------------------- |
+| `directory` | :heavy_check_mark: |         | Folder containing your resources                                           |
+| `resource`  | :heavy_check_mark: |         | Resource you want to update in your namespace, can be `flow` or `template` |
+| `server`    | :x:                |         | URL of your Kestra server, if none is provided, validation is done locally |
+| `user`      | :x:                |         | User for the basic auth                                                    |
+| `password`  | :x:                |         | Password for the basic auth                                                |
+| `image_tag` | :x:                |         | Image tag for Kestra image used for validation. defaults to `latest-full`  |
 
 ### Server-side validation
 
@@ -34,8 +35,8 @@ with TaskDefaults included, it may be more interesting to validate your resource
 
 #### Differences between server-side and client-side validation
 
-| Validation         | Server-side        | Client-side        | 
-|--------------------|--------------------|--------------------|
+| Validation         | Server-side        | Client-side        |
+| ------------------ | ------------------ | ------------------ |
 | Format             | :heave_check_mark: | :heave_check_mark: |
 | Plugins properties | :heave_check_mark: | :x:                |
 | Customs plugin     | :heave_check_mark: | :x:                |
@@ -51,20 +52,31 @@ on the server.
 Example with `Flows`, validated on the `server-side`.
 
 ```yaml
-      - name: flow update namespace action
-        uses: actions/kestra-validate-action@develop
-        with:
-          resource: flow
-          directory: ./kestra/flows
-          server: https:/kestra.io
+- name: flow update namespace action
+  uses: actions/kestra-validate-action@develop
+  with:
+    resource: flow
+    directory: ./kestra/flows
+    server: https:/kestra.io
 ```
 
 Example with `Templates`, validated locally with the `Kestra Client`.
 
 ```yaml
-      - name: template update namespace action
-        uses: actions/kestra-validate-action@develop
-        with:
-          resource: template
-          directory: ./kestra/templates
+- name: template update namespace action
+  uses: actions/kestra-validate-action@develop
+  with:
+    resource: template
+    directory: ./kestra/templates
+```
+
+Example with custom Docker Tag .
+
+```yaml
+- name: template update namespace action
+  uses: actions/kestra-validate-action@develop
+  with:
+    resource: template
+    directory: ./kestra/templates
+    image_tag: 0.13.10-full
 ```
