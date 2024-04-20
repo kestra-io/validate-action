@@ -1,4 +1,5 @@
-FROM kestra/kestra:latest-full
+ARG IMAGE_TAG=latest-full
+FROM kestra/kestra:$IMAGE_TAG
 
 COPY entrypoint.sh /entrypoint.sh
 
