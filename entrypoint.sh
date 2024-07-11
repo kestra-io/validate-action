@@ -15,7 +15,7 @@ if [[ $3 ]]; then
   
   # Check if there is a tenant id
   tenant=""
-  if [[ $9 ]]; then
+  if [[ $7 ]]; then
     tenant="--tenant=${7}"
   fi
 else
