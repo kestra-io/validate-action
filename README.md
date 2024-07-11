@@ -27,6 +27,7 @@ The Action version is based on the Kestra Version. Only Kestra v0.6.1+ is suppor
 | ``user``      | :x:                |         | User for the basic auth                                                    |
 | ``password``  | :x:                |         | Password for the basic auth                                                |
 | ``apiToken``  | :x:                |         | API token for EE auth                                                      |
+| ``tenant``    | :x:                |         | Tenant identifier (EE only, when multi-tenancy is enabled)                 |
 
 ### Server-side validation
 

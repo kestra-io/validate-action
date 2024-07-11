@@ -12,8 +12,14 @@ if [[ $3 ]]; then
   if [[ ${6} ]]; then
     apiToken="--api-token=${6}"
   fi
+  
+  # Check if there is a tenant id
+  tenant=""
+  if [[ $9 ]]; then
+    tenant="--tenant=${7}"
+  fi
 else
   location="--local"
 fi
 
-/app/kestra "$2" validate "$1" $location $apiToken
+/app/kestra "$2" validate "$1" $location $apiToken $tenant

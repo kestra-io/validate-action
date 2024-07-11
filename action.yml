@@ -26,6 +26,9 @@ inputs:
   apiToken:
     description: 'API Token (EE only)'
     required: false
+  tenant:
+    description: 'Tenant identifier (EE only, when multi-tenancy is enabled)'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
