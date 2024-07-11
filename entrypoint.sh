@@ -6,8 +6,14 @@ if [[ $3 ]]; then
   if [[ $4 && $5 ]]; then
       location="$location --user=$4:$5"
   fi
+
+  # Check if there is a API Token
+  apiToken=""
+  if [[ ${6} ]]; then
+    apiToken="--api-token=${6}"
+  fi
 else
   location="--local"
 fi
 
-/app/kestra "$2" validate "$1" $location
+/app/kestra "$2" validate "$1" $location $apiToken

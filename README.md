@@ -26,6 +26,7 @@ The Action version is based on the Kestra Version. Only Kestra v0.6.1+ is suppor
 | ``server``    | :x:                |         | URL of your Kestra server, if none is provided, validation is done locally |
 | ``user``      | :x:                |         | User for the basic auth                                                    |
 | ``password``  | :x:                |         | Password for the basic auth                                                |
+| ``apiToken``  | :x:                |         | API token for EE auth                                                      |
 
 ### Server-side validation
 
