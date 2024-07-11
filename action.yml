@@ -39,3 +39,4 @@ runs:
     - ${{ inputs.user }}
     - ${{ inputs.password }}
     - ${{ inputs.apiToken }}
+    - ${{ inputs.tenant }}
