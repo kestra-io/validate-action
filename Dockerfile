@@ -1,4 +1,4 @@
-FROM kestra/kestra:latest
+FROM kestra/kestra:v0.16.12-full
 
 COPY entrypoint.sh /entrypoint.sh
 
