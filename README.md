@@ -38,10 +38,10 @@ with TaskDefaults included, it may be more interesting to validate your resource
 
 | Validation         | Server-side        | Client-side        | 
 |--------------------|--------------------|--------------------|
-| Format             | :heave_check_mark: | :heave_check_mark: |
-| Plugins properties | :heave_check_mark: | :x:                |
-| Customs plugin     | :heave_check_mark: | :x:                |
-| Flows TaskDefaults | :heave_check_mark: | :x:                |
+| Format             | :heavy_check_mark: | :heavy_check_mark: |
+| Plugins properties | :heavy_check_mark: | :x:                |
+| Customs plugin     | :heavy_check_mark: | :x:                |
+| Flows TaskDefaults | :heavy_check_mark: | :x:                |
 
 ### Auth
 
@@ -54,7 +54,7 @@ Example with `Flows`, validated on the `server-side`.
 
 ```yaml
       - name: flow update namespace action
-        uses: actions/kestra-validate-action@develop
+        uses: kestra-io/validate-action@master
         with:
           resource: flow
           directory: ./kestra/flows
@@ -65,7 +65,7 @@ Example with `Templates`, validated locally with the `Kestra Client`.
 
 ```yaml
       - name: template update namespace action
-        uses: actions/kestra-validate-action@develop
+        uses: kestra-io/validate-action@master
         with:
           resource: template
           directory: ./kestra/templates
