@@ -52,6 +52,9 @@ on the server.
 Example with `Flows`, validated on the `server-side`.
 
 ```yaml
+      - name: Checkout repo content
+        uses: actions/checkout@v4
+
       - name: flow update namespace action
         uses: kestra-io/validate-action@master
         with:
@@ -63,6 +66,9 @@ Example with `Flows`, validated on the `server-side`.
 Example with `Templates`, validated locally with the `Kestra Client`.
 
 ```yaml
+      - name: Checkout repo content
+        uses: actions/checkout@v4
+
       - name: template update namespace action
         uses: kestra-io/validate-action@master
         with:
