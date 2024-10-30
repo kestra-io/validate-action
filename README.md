@@ -1,6 +1,6 @@
 # Validate Action
 
-Official GitHub Action to create CI/CD pipelines that validate [Flows]https://kestra.io/docs/workflow-components/flow) before deploying to your Kestra server.
+Official GitHub Action to create CI/CD pipelines that validate [Flows](https://kestra.io/docs/workflow-components/flow) before deploying to your Kestra server.
 
 This action could be used within a workflow that runs when a `Pull Request` is triggered.
 
