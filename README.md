@@ -1,7 +1,6 @@
 # Validate Action
 
-Official GitHub Action to create CI/CD pipelines that validate [Flows](https://kestra.io/docs/concepts/flows.html)
-or [Templates](https://kestra.io/docs/developer-guide/templates/) before deploying to your Kestra server.
+Official GitHub Action to create CI/CD pipelines that validate [Flows]https://kestra.io/docs/workflow-components/flow) before deploying to your Kestra server.
 
 This action could be used within a workflow that runs when a `Pull Request` is triggered.
 
@@ -70,3 +69,5 @@ Example with `Templates`, validated locally with the `Kestra Client`.
           resource: template
           directory: ./kestra/templates
 ```
+
+Read more in the documentation [here](https://kestra.io/docs/version-control-cicd/cicd/github-action).
