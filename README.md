@@ -40,7 +40,7 @@ with TaskDefaults included, it may be more interesting to validate your resource
 | Format             | :heavy_check_mark: | :heavy_check_mark: |
 | Plugins properties | :heavy_check_mark: | :x:                |
 | Customs plugin     | :heavy_check_mark: | :x:                |
-| Flows TaskDefaults | :heavy_check_mark: | :x:                |
+| Flows PluginDefaults | :heavy_check_mark: | :x:                |
 
 ### Auth
 
