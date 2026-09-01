@@ -1,3 +1,7 @@
+# Legacy
+
+This repository is a legacy GitHub Action that is no longer maintained. It has been superseded by [`kestra-io/validate-flows-action`](https://github.com/kestra-io/validate-flows-action). Please use that action for your CI/CD pipeline instead.
+
 # Validate Action
 
 Official GitHub Action to create CI/CD pipelines that validate [Flows](https://kestra.io/docs/workflow-components/flow) before deploying to your Kestra server.
